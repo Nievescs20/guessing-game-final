@@ -86,6 +86,8 @@ resetButton.addEventListener("click", () => {
   guess4.innerText = guesses[3] || "-";
   guess5.innerText = guesses[4] || "-";
   input.value = "";
+  input.disabled = false;
+  disabled = false;
 });
 
 hintButton.addEventListener("click", () => {
