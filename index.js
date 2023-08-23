@@ -34,6 +34,7 @@ function turn() {
   if (guess === answer) {
     gameStatus.innerText = `You Win! The Winning Number was ${answer}`;
     disabled = true;
+    input.disabled = true;
     return;
   } else if (guess < answer) {
     if (answer - guess > 25) {
@@ -67,6 +68,7 @@ function turn() {
 
   if (guesses.length === 5 && winner === false) {
     disabled = true;
+    input.disabled = true;
     gameStatus.innerText = `You Lose. The Winning Number Was ${answer}`;
     gameHint.innerText = "Reset The Game To Play Again!";
   }
