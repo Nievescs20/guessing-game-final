@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="game_container">
+      <div id="title_container">
+        <h1 class="roboto" id="game_status">THE GUESSING GAME</h1>
+        <h3 class="roboto" id="game_hint">Guess A Number Between 1-100</h3>
+      </div>
+      <div id="guess_container">
+        <input
+          class="shadow roboto"
+          id="guess"
+          placeholder="Enter Guess Here"
+          maxlength="3"
+        />
+        <div class="shadow" id="make_guess">GO!</div>
+      </div>
+      <div id="history_container">
+        <div id="previous_guesses">
+          <div class="guess shadow roboto" id="guess1">-</div>
+          <div class="guess shadow roboto" id="guess2">-</div>
+          <div class="guess shadow roboto" id="guess3">-</div>
+          <div class="guess shadow roboto" id="guess4">-</div>
+          <div class="guess shadow roboto" id="guess5">-</div>
+        </div>
+        <div id="button_container">
+          <button class="shadow roboto" id="reset">RESET THE GAME</button>
+          <button class="shadow roboto" id="hint">NEED A HINT?</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <a href="https://www.fullstackacademy.com" target="_blank">
+        <img
+          id="fsa"
+          src="https://mma.prnewswire.com/media/834573/Fullstack_Academy_logo.jpg?p=facebook"
+          alt="fsa-logo"
+        />
+      </a>
+      <a href="https://www.github.com" target="_blank">
+        <img
+          id="github"
+          src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
+          alt="github-logo"
+        />
+      </a>
+      <a href="https://www.gracehopper.com/" target="_blank">
+        <img
+          id="gh"
+          src="https://jmunoz1992.github.io/Guessing-Game-Final/img/grace_hopper_academy.png"
+          alt="gh-logo"
+        />
+      </a>
+    </footer>
+    <script src="index.js" />
+  </body>
+</html>

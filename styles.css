@@ -1,0 +1,215 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game_container {
+  width: 70vw;
+  flex: 1;
+  margin: 10vh 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: darkgray;
+  color: white;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+#title_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+#guess_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 1rem;
+}
+
+#guess {
+  height: 25vh;
+  width: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border: none;
+}
+
+#make_guess {
+  height: 10vh;
+  width: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background-color: teal;
+  cursor: pointer;
+}
+
+#history_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+#previous_guesses {
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guess {
+  height: 50px;
+  width: 50px;
+  border: 2px solid white;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button_container {
+  display: flex;
+  width: 30vw;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem;
+}
+
+#reset {
+  height: 40px;
+  width: 175px;
+  border-radius: .5rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+#hint {
+  height: 40px;
+  width: 175px;
+  border-radius: .5rem;
+  background-color: goldenrod;
+  cursor: pointer;
+  border: none;
+}
+
+footer {
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#fsa {
+  height: 12vh;
+}
+
+#github {
+  height: 5vw;
+}
+
+#gh {
+  height: 7vh;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 7px 10px -4px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 0px 7px 10px -4px rgba(0, 0, 0, 0.62);
+  box-shadow: 0px 7px 10px -4px rgba(0, 0, 0, 0.62);
+}
