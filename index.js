@@ -7,6 +7,7 @@ const hint = [
 ];
 hint.sort((a, b) => a - b);
 let winner = false;
+let disabled = false;
 
 const input = document.getElementById("guess");
 const makeGuess = document.getElementById("make_guess");
@@ -20,7 +21,8 @@ const guess5 = document.getElementById("guess5");
 const resetButton = document.getElementById("reset");
 const hintButton = document.getElementById("hint");
 
-makeGuess.addEventListener("click", () => {
+function turn() {
+  if (disabled) return;
   if (guesses.includes(parseInt(input.value))) {
     gameStatus.innerText = "You Have Already Guessed That Number!";
     gameHint.innerText = "Guess Again!";
@@ -31,6 +33,7 @@ makeGuess.addEventListener("click", () => {
   const guess = parseInt(input.value);
   if (guess === answer) {
     gameStatus.innerText = `You Win! The Winning Number was ${answer}`;
+    disabled = true;
     return;
   } else if (guess < answer) {
     if (answer - guess > 25) {
@@ -63,10 +66,13 @@ makeGuess.addEventListener("click", () => {
   input.value = "";
 
   if (guesses.length === 5 && winner === false) {
+    disabled = true;
     gameStatus.innerText = `You Lose. The Winning Number Was ${answer}`;
     gameHint.innerText = "Reset The Game To Play Again!";
   }
-});
+}
+
+makeGuess.addEventListener("click", () => turn());
 
 resetButton.addEventListener("click", () => {
   guesses = [];
