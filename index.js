@@ -1,5 +1,6 @@
 let guesses = [];
-const answer = Math.floor(Math.random() * 99 + 1);
+let answer = Math.floor(Math.random() * 99 + 1);
+console.log(answer);
 const hint = [
   answer,
   Math.floor(Math.random() * 99 + 1),
@@ -89,6 +90,7 @@ resetButton.addEventListener("click", () => {
   input.disabled = false;
   disabled = false;
   answer = Math.floor(Math.random() * 99 + 1);
+  console.log(answer);
 });
 
 hintButton.addEventListener("click", () => {
