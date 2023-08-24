@@ -88,6 +88,7 @@ resetButton.addEventListener("click", () => {
   input.value = "";
   input.disabled = false;
   disabled = false;
+  answer = Math.floor(Math.random() * 99 + 1);
 });
 
 hintButton.addEventListener("click", () => {
